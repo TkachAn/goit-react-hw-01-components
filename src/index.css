@@ -1,4 +1,9 @@
 @import-normalize; /* bring in normalize.css styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -8,8 +13,255 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+p,
+li,
+ul,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: aliceblue;
+  margin: 0 auto 40px;
+}
+.profile img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.description {
+  max-width: 320px;
+  padding: 30px 0;
+  text-align: center;
+  margin: auto;
+  background-color: #fff;
+}
+.name {
+  margin: 20px 0 0 0;
+  font-size: 40px;
+  font-weight: 700;
+}
+.tag {
+  color: darkgrey;
+  font-size: 25px;
+  font-weight: 700;
+}
+.location {
+  margin: 20px 0 0 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: darkgray;
+}
+
+@media (min-width: 480px) {
+  .description {
+    max-width: 480px;
+  }
+}
+
+.stats {
+  margin: auto;
+  display: flex;
+  width: 320px;
+  margin: 0 auto 0;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0;
+  background-color: aliceblue;
+  font-size: 12px;
+}
+.stats li {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  padding: 20px 11px;
+  row-gap: 8px;
+  border: 1px solid darkgray;
+}
+
+@media (min-width: 480px) {
+  .stats {
+    max-width: 480;
+    font-size: 18px;
+  }
+  .stats li {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    padding: 20px 0.1rem;
+    min-width: 8.55em;
+    row-gap: 8px;
+
+    /* font-size: 1.2rem; */
+  }
+}
+
+.stats .label {
+  color: darkgrey;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+.stats .quantity {
+  text-align: center;
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
+}
+/*****************/
+
+.statistics {
+  /* display: flex; */
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+}
+.stat-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+.stat-list > li {
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+  row-gap: 8px;
+  padding: 10px 13px;
+  background-color: darkgray;
+}
+
+@media (min-width: 480px) {
+  .statistics {
+    /* display: flex; */
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .stat-list > li {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    row-gap: 8px;
+    padding: 10px 29px;
+    background-color: darkgray;
+  }
+}
+.statistics h2 {
+  /* display: flex; */
+  color: #000;
+
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+/* @each $animal in dog, cat, bird, turtle {
+  .#{$animal}-icon {
+    background-image: url('../images/#{$animal}.png');
+  }
+} */
+.stat-list > li:nth-child(1) {
+  background-color: deeppink;
+}
+.stat-list > li:nth-child(2) {
+  background-color: cadetblue;
+}
+.stat-list > li:nth-child(3) {
+  background-color: crimson;
+}
+.stat-list > li:nth-child(4) {
+  background-color: cornflowerblue;
+}
+.stat-list > li:nth-child(5) {
+  background-color: orange;
+}
+/****************************/
+.friend-list {
+  width: 320px;
+  margin: 0 auto 60px;
+}
+.friend-list > li {
+  display: flex;
+  width: 320px;
+  border: #000 solid 1px;
+  border-radius: 8px;
+  gap: 25px;
+  margin-bottom: 10px;
+  padding: 10px 30px;
+  align-items: center;
+}
+@media (min-width: 480px) {
+  .friend-list {
+    width: 480px;
+    margin: 0 auto 60px;
+  }
+  .friend-list > li {
+    margin: 0 auto 15px;
+    width: 480px;
+    padding: 10px 50px;
+    gap: 55px;
+  }
+}
+
+.status {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: aquamarine;
+}
+
+/***********************/
+.transaction-history {
+  margin: 0 auto 60px;
+  width: 320px;
+}
+.transaction-history thead {
+  background-color: cornflowerblue;
+  height: 50px;
+}
+.transaction-history th {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+.transaction-history td {
+  height: 30px;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.transaction-history tr:nth-child(2n) {
+  background-color: darkgray;
+  color: #fff;
+}
+@media (min-width: 480px) {
+  .transaction-history {
+    width: 480px;
+  }
+  .transaction-history td {
+    padding-left: 40px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+/* .friend-list {
+  width: 320px;
+  margin: 0 auto 60px;
+} */
