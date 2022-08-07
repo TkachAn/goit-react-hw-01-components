@@ -1,4 +1,4 @@
-//import PropTypes, { Stats } from 'prop-types';
+import PropTypes from 'prop-types';
 import { StatElement } from '../StatElement/StatElement';
 import css from './Statistics.module.css';
 export function Statistics({ stats }) {
@@ -22,8 +22,10 @@ export function Statistics({ stats }) {
   );
 }
 
-// Stats.propTypes = {
-//   id: PropTypes.string.isRequired,
-//   label: PropTypes.string.isRequired,
-//   percentage: PropTypes.number.isRequired,
-// };
+Statistics.propTypes = {
+	data:PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
+	})
+};
