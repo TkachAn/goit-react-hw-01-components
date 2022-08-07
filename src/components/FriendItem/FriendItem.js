@@ -1,27 +1,23 @@
-import PropTypes from 'prop-types';
-import friends from '../friends.json';
+// import PropTypes from 'prop-types';
+
 // import { Online } from './FriendItem.styled';
-export const FriendItem = () => {
+export const FriendItem = ({ isOnline, avatar, name }) => {
   return (
     <>
-      {friends.map(item => (
-        <li key={item.id}>
-          <span className="status">{item.isOnline}</span>
-          <img
-            className="avatar"
-            src={item.avatar}
-            alt={item.name}
-            width={'48'}
-          />
-          <p className="name">{item.name}</p>
-        </li>
-      ))}
+      {isOnline ? (
+        <span className="status green">{isOnline}</span>
+      ) : (
+        <span className="status red">{isOnline}</span>
+      )}
+
+      <img className="avatar" src={avatar} alt={name} width={'48'} />
+      <p className="name">{name}</p>
     </>
   );
 };
-friends.propTypes = {
-  id: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
-  name: PropTypes.string.isRequired,
-};
+// friends.propTypes = {
+//   id: PropTypes.number.isRequired,
+//   avatar: PropTypes.string.isRequired,
+//   isOnline: PropTypes.bool.isRequired,
+//   name: PropTypes.string.isRequired,
+// };
