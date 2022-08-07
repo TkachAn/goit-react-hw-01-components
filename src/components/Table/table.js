@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import transactions from '../transactions.json';
 export const Tbody = () => {
   return (
@@ -11,4 +12,10 @@ export const Tbody = () => {
       ))}
     </tbody>
   );
+};
+transactions.propTypes = {
+  id: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
 };
