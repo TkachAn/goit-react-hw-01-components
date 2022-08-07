@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './StatElement.module.css';
 export const StatElement = ({ label, percentage }) => {
   return (
@@ -8,9 +8,9 @@ export const StatElement = ({ label, percentage }) => {
     </>
   );
 };
-// StatElement.propTypes = {
-//   data: PropTypes.shape({
-//     label: PropTypes.string.isRequired,
-//     percentage: PropTypes.number.isRequired,
-//   }),
-// };
+StatElement.propTypes = {
+  data: PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+  }),
+};
