@@ -1,9 +1,6 @@
-//import PropTypes, { array } from 'prop-types';
-import { StatList } from '../StatList/StatList';
-//import data from './data.json';
+//import PropTypes, { Statistics } from 'prop-types';
+import { StatElement } from '../StatElement/StatElement';
 export function Statistics({ stats }) {
-  //console.log('stats', stats);
-  //console.log('stats.id', stats.id);
   return (
     <section className="statistics">
       <h2 className="title">Upload stats</h2>
@@ -11,7 +8,7 @@ export function Statistics({ stats }) {
         {stats.map(stat => {
           return (
             <li key={stat.id}>
-              <StatList
+              <StatElement
                 id={stat.id}
                 label={stat.label}
                 percentage={stat.percentage}
@@ -24,7 +21,8 @@ export function Statistics({ stats }) {
   );
 }
 
-// array.propTypes = {
+// Statistics.propTypes = {
+//   id: PropTypes.string.isRequired,
 //   label: PropTypes.string.isRequired,
 //   percentage: PropTypes.number.isRequired,
 // };
