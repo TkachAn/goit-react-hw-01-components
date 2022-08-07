@@ -1,0 +1,18 @@
+.status {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: greenyellow;
+}
+.status_ {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: red;
+}
+.green {
+  background-color: greenyellow;
+}
+.red {
+  background-color: red;
+}
