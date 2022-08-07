@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-// import transactions from '../transactions.json';
 export function Tr({ type, amount, currency }) {
   return (
     <>
@@ -15,4 +14,3 @@ Tr.propTypes = {
   amount: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,
 };
-//transactions
