@@ -1,19 +1,8 @@
-import PropTypes from 'prop-types';
-import data from '../data.json';
-export const StatList = () => {
+export const StatList = ({ id, label, percentage }) => {
   return (
     <>
-      {data.map(item => (
-        <li key={item.id}>
-          <span className="label">{item.label}</span>
-          <span className="percentage">{item.percentage}%.</span>
-        </li>
-      ))}
+      <span className="label">{label}</span>
+      <span className="percentage">{percentage}%.</span>
     </>
   );
-};
-
-data.propTypes = {
-  label: PropTypes.string.isRequired,
-  percentage: PropTypes.string.isRequired,
 };
