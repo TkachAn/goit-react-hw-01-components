@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Tr } from '../Table/table';
 import css from './TransactionHistory.module.css';
 export function History({ trans }) {
@@ -27,3 +28,11 @@ export function History({ trans }) {
     </table>
   );
 }
+History.propTypes = {
+  transactions: PropTypes.shape({
+    id: PropTypes.bool.isRequired,
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+  }),
+};
