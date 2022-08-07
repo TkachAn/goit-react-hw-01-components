@@ -223,7 +223,12 @@ code {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: aquamarine;
+}
+.green {
+  background-color: greenyellow;
+}
+.red {
+  background-color: red;
 }
 
 /***********************/
