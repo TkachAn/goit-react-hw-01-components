@@ -1,13 +1,14 @@
-// import PropTypes, { Stats } from 'prop-types';
+//import PropTypes, { Stats } from 'prop-types';
 import { StatElement } from '../StatElement/StatElement';
+import css from './Statistics.module.css';
 export function Statistics({ stats }) {
   return (
-    <section className="statistics">
-      <h2 className="title">Upload stats</h2>
-      <ul className="stat-list">
+    <section className={css.statistics}>
+      <h2 className={css.title}>Upload stats</h2>
+      <ul className={css.statList}>
         {stats.map(stat => {
           return (
-            <li key={stat.id}>
+            <li key={stat.id} className={css.element}>
               <StatElement
                 id={stat.id}
                 label={stat.label}
