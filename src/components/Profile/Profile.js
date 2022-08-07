@@ -1,8 +1,4 @@
-//import user from '../user.json';
 import PropTypes from 'prop-types';
-import { ProfileS } from './Profile.styled';
-import { Stats } from './Profile.styled';
-import { StatsEl } from './Profile.styled';
 import css from './Profile.module.css';
 export const Profile = ({
   avatar,
@@ -12,28 +8,28 @@ export const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <ProfileS className={css.profile}>
+    <div className={css.profile}>
       <div className={css.description}>
         <img src={avatar} alt={username} className={css.avatar} />
         <p className={css.name}>{username}</p>
         <p className={css.tag}>@{tag}</p>
         <p className={css.location}>{location}</p>
       </div>
-      <Stats className={css.stats}>
-        <StatsEl>
+      <ul className={css.stats}>
+        <li>
           <span className={css.label}>Followers</span>
           <span className={css.quantity}>{followers}</span>
-        </StatsEl>
-        <StatsEl>
+        </li>
+        <li>
           <span className={css.label}>Views</span>
           <span className={css.quantity}>{views}</span>
-        </StatsEl>
-        <StatsEl>
+        </li>
+        <li>
           <span className={css.label}>Likes</span>
           <span className={css.quantity}>{likes}</span>
-        </StatsEl>
-      </Stats>
-    </ProfileS>
+        </li>
+      </ul>
+    </div>
   );
 };
 Profile.propTypes = {
@@ -47,5 +43,5 @@ Profile.propTypes = {
       views: PropTypes.number.isRequired,
       likes: PropTypes.number.isRequired,
     }).isRequired,
-  }), //.isRequired,
+  }),
 };
