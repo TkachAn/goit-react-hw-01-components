@@ -1,0 +1,30 @@
+.friendList {
+  width: 320px;
+  margin: 0 auto 60px;
+}
+@media (min-width: 480px) {
+  .friendList {
+    width: 480px;
+    margin: 0 auto 60px;
+  }
+}
+.item {
+  display: flex;
+  width: 320px;
+  border: #000 solid 1px;
+  border-radius: 8px;
+  gap: 25px;
+  margin-bottom: 10px;
+  padding: 10px 30px;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 700;
+}
+@media (min-width: 480px) {
+  .item {
+    margin: 0 auto 15px;
+    width: 480px;
+    padding: 10px 50px;
+    gap: 55px;
+  }
+}
