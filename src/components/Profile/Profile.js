@@ -1,29 +1,35 @@
-import user from '../user.json';
+//import user from '../user.json';
 import PropTypes from 'prop-types';
 import { ProfileS } from './Profile.styled';
 import { Stats } from './Profile.styled';
 import { StatsEl } from './Profile.styled';
-export const Profile = () => {
+export const Profile = ({
+  avatar,
+  username,
+  tag,
+  location,
+  stats: { followers, views, likes },
+}) => {
   return (
     <ProfileS className="profile">
       <div className="description">
-        <img src={user.avatar} alt={user.username} className="avatar" />
-        <p className="name">{user.username}</p>
-        <p className="tag">@{user.tag}</p>
-        <p className="location">{user.location}</p>
+        <img src={avatar} alt={username} className="avatar" />
+        <p className="name">{username}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}</p>
       </div>
       <Stats className="stats">
         <StatsEl>
           <span className="label">Followers</span>
-          <span className="quantity">{user.stats.followers}</span>
+          <span className="quantity">{followers}</span>
         </StatsEl>
         <StatsEl>
           <span className="label">Views</span>
-          <span className="quantity">{user.stats.views}</span>
+          <span className="quantity">{views}</span>
         </StatsEl>
         <StatsEl>
           <span className="label">Likes</span>
-          <span className="quantity">{user.stats.likes}</span>
+          <span className="quantity">{likes}</span>
         </StatsEl>
       </Stats>
     </ProfileS>
