@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { Tr } from '../Table/table';
 import css from './TransactionHistory.module.css';
 export function History({ trans }) {
   return (
@@ -15,12 +14,9 @@ export function History({ trans }) {
         {trans.map(item => {
           return (
             <tr key={item.id}>
-              <Tr
-                id={item.id}
-                type={item.type}
-                amount={item.amount}
-                currency={item.currency}
-              />
+              <td>{item.type}</td>
+              <td>{item.amount}</td>
+              <td>{item.currency}</td>
             </tr>
           );
         })}
@@ -29,7 +25,8 @@ export function History({ trans }) {
   );
 }
 History.propTypes = {
-  transactions: PropTypes.shape({
+  trans: PropTypes.array.isRequired,
+  item: PropTypes.shape({
     id: PropTypes.bool.isRequired,
     type: PropTypes.string.isRequired,
     amount: PropTypes.string.isRequired,
