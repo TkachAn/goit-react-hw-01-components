@@ -1,8 +1,8 @@
 import { Profile } from './Profile/Profile';
-import user from './user.json';
-import data from './data.json';
-import friends from './friends.json';
-import transactions from './transactions.json';
+import user from '../jsonFile/user.json';
+import data from '../jsonFile/data.json';
+import friends from '../jsonFile/friends.json';
+import transactions from '../jsonFile/transactions.json';
 import { FriendList } from './FriendList/FriendList';
 import { Statistics } from './Statistics/Statistics';
 import { History } from './TransactionHistory/TransactionHistory';
