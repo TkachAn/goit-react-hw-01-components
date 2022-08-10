@@ -61,3 +61,15 @@
 .statList > li:nth-child(5) {
   background-color: orange;
 }
+.label {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.percentage {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
