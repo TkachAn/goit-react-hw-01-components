@@ -5,13 +5,10 @@ export function FriendList({ friend }) {
   return (
     <ul className={css.friendList}>
       {friend.map(item => {
+        const { id, isOnline, avatar, name } = item;
         return (
-          <li key={item.id} className={css.item}>
-            <FriendItem
-              isOnline={item.isOnline}
-              avatar={item.avatar}
-              name={item.name}
-            />
+          <li key={id} className={css.item}>
+            <FriendItem isOnline={isOnline} avatar={avatar} name={name} />
           </li>
         );
       })}
