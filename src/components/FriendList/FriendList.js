@@ -20,9 +20,4 @@ export function FriendList({ friend }) {
 }
 FriendList.propTypes = {
   friend: PropTypes.array.isRequired,
-  item: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    isOnline: PropTypes.bool.isRequired,
-  }),
 };
