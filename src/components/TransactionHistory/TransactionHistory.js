@@ -12,11 +12,12 @@ export function History({ trans }) {
       </thead>
       <tbody>
         {trans.map(item => {
+          const { id, type, amount, currency } = item;
           return (
-            <tr key={item.id}>
-              <td>{item.type}</td>
-              <td>{item.amount}</td>
-              <td>{item.currency}</td>
+            <tr key={id}>
+              <td>{type}</td>
+              <td>{amount}</td>
+              <td>{currency}</td>
             </tr>
           );
         })}
@@ -26,10 +27,4 @@ export function History({ trans }) {
 }
 History.propTypes = {
   trans: PropTypes.array.isRequired,
-  item: PropTypes.shape({
-    id: PropTypes.bool.isRequired,
-    type: PropTypes.string.isRequired,
-    amount: PropTypes.string.isRequired,
-    currency: PropTypes.string.isRequired,
-  }),
 };
